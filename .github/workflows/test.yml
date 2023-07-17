@@ -16,4 +16,4 @@ jobs:
       - name: testing skip conditional
         env: 
           MESSAGES: ${{ join(github.event.commits.*.messages) }}
-        run: echo "MESSAGES"
+        run: echo "$MESSAGES"
