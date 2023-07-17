@@ -15,5 +15,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: testing skip conditional
         env: 
-          MESSAGES: ${{ join(github.event.commits.*.message) }}
+          MESSAGES: ${{ contains(join(github.event.commits.*.message), '#skip') }}
         run: echo "$MESSAGES"
